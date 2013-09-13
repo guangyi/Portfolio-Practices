@@ -68,7 +68,7 @@ Ball.prototype.move = function(){
 	if (this.vy0 <= 0){
 		this.YDirection = 1;
 	}
-	//if this.stop property is true, then the 	
+	//if this.stop property is true, then the ball won't move( move function won't be called) any more.	
 	if (this.y >= canvas.height - this.radius && this.vy0 <= 0){
 		this.stop = true;
 	}
