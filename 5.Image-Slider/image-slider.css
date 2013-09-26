@@ -5,7 +5,8 @@
 	border:1px solid gray;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
-	box-sizing:border-box;	
+	box-sizing:border-box;
+	background: black;	
 }
 .image-slider-wrapper{
 	overflow: hidden;
@@ -13,7 +14,6 @@
 #image_slider{
 	position: relative;
 	overflow: hidden;
-	border:1px solid red;
 	height: 280px;
 	padding:0;
 	left:0;

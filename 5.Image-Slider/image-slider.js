@@ -73,4 +73,4 @@ function animate(opts){
 		}
 	}, opts.dalay || 17);
 }
-window.onload = init;
+//window.onload = init;
