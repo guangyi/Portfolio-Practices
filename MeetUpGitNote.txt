@@ -1,0 +1,6 @@
+source code control
+svn cvs needs server. center to communicate
+git: no server 
+drupal??
+
+1.git init ---creates entire git repository

@@ -1,27 +1,25 @@
 var ul;
-var li_items; 
-var li_number;
-var image_number = 0;
-var slider_width = 0;
+var liItems; 
+var liNumber;
+var sliderWidth = 0;
 var left = 0;
 var id;
-var image_width;
-var current = 0;
+var imageWidth;
+var currentImage = 0;
 function init(){	
 	ul = document.getElementById('image_slider');
-	li_items = ul.children;
-	li_number = li_items.length;
-	for (i = 0; i < li_number; i++){
+	liItems = ul.children;
+	liNumber = liItems.length;
+	for (i = 0; i < liNumber; i++){
 		// nodeType == 1 means the node is an element.
 		// in this way it's a cross-browser way.
-		//if (li_items[i].nodeType == 1){
+		//if (liItems[i].nodeType == 1){
 			//clietWidth and width???
-			image_width = li_items[i].childNodes[0].clientWidth;
-			slider_width += image_width;
-			image_number++;
-	}
-	
-	ul.style.width = parseInt(slider_width) + 'px';
+			// childNodes and children??
+			imageWidth = liItems[i].childNodes[0].clientWidth;
+			sliderWidth += imageWidth;
+	}	
+	ul.style.width = parseInt(sliderWidth) + 'px';
 	slider(ul);
 }
 
@@ -29,34 +27,44 @@ function slider(ul){
 		animate({
 			delay:17,
 			duration: 3000,
+			//delta function is to set how the image slide--keep still for a while and move to next picture.
 			delta:function(p){return Math.max(0, -1 + 2 * p)},
 			step:function(delta){
-					ul.style.left = '-' + parseInt(current * image_width + delta * image_width) + 'px';
+					//step function will be called many times until clearInterval() been called
+					// currentImage * imageWidth is the currentImage position of ul
+					// delta start from 0 to 1, delta * imageWidth is the pixels that changes
+					ul.style.left = '-' + parseInt(currentImage * imageWidth + delta * imageWidth) + 'px';
 				},
 			callback:function(){
-				current++;
-				if(current < li_number-1){
+				currentImage++;
+				// if it doesn't slied to the last image, keep sliding
+				if(currentImage < liNumber-1){
 					slider(ul);
 				}
+				// if current image it's the last one, it slides back to the first one
 				else{
-					var left = (li_number - 1) * image_width;					
-					setTimeout(function(){goBack(left)},2000); 					
+					var leftPosition = (liNumber - 1) * imageWidth;
+					// after 2 seconds, call the goBack function to slide to the first image					
+					setTimeout(function(){goBack(leftPosition)},2000); 					
 					setTimeout(function(){slider(ul)}, 4000);
 				}
-
 			}
 		});
 }
-function goBack(left_limits){
-	current = 0;	
-	setInterval(function(){
-		if(left_limits >= 0){
-			ul.style.left = '-' + parseInt(left_limits) + 'px';
-			left_limits -= image_width / 10;
+function goBack(leftPosition){
+	currentImage = 0;	
+	var id = setInterval(function(){
+		if(leftPosition >= 0){
+			ul.style.left = '-' + parseInt(leftPosition) + 'px';
+			// everytime goBack be called, the ul moves 1/10 of image width until it goes to 0 px.
+			leftPosition -= imageWidth / 10;
 		}
-		
+		else{
+			clearInterval(id);
+		}		
 	}, 17);
 }
+//generic animate function
 function animate(opts){
 	var start = new Date;
 	var id = setInterval(function(){
@@ -73,4 +81,4 @@ function animate(opts){
 		}
 	}, opts.dalay || 17);
 }
-//window.onload = init;
+window.onload = init;
