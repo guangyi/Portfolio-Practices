@@ -23,8 +23,9 @@ function init(){
 	/*
 	prev.onclick = function(){slide(-1);};
 	next.onclick = function(){slide(1);};*/
-	prev.onclick = function(){ onClickPrev();};
-	next.onclick = function(){ onClickNext();};
+	prev.onclick = onClickPrev;
+	//prev.onclick = function(){ onClickPrev();};
+	next.onclick = onClickNext;
 }
 
 function animate(opts){
@@ -97,26 +98,35 @@ function onClickNext(){
 function generatePager(imageNumber){	
 	var pageNumber;
 	var pagerDiv = document.getElementById('pager');
-	for (i = 0; i < imageNumber; i++){
+	for (var i = 0; i < imageNumber; i++){
 		var li = document.createElement('li');
 		pageNumber = document.createTextNode(parseInt(i + 1));
 		li.appendChild(pageNumber);
 		pagerDiv.appendChild(li);
 		// add event inside a loop, closure issue.
-		li.onclick = function(i){
+		var j = i;
+		li.onclick = (function(i){
 			return function(){
 				slideTo(i);
 			}
-		}(i);
+		}(i));
+		/*li.onclick = (function(i2){
+			return slideTo(i2);
+		}(i));*/
 	}
 	// style.width can't get width from css sheet. 	
 	var computedStyle = document.defaultView.getComputedStyle(li, null);
-	//border width 1px; offsetWidth = 22
-	var liWidth = parseInt(li.offsetWidth);
+	//border width 1px; offsetWidth = 22; offsetWidth returns a number
+	var liWidth = li.offsetWidth;
 	// remove px from the string returned. like '5px'-->'5'
 	var liMargin = parseInt(computedStyle.margin.replace('px',""));
 	// margin on both left and right side.
 	pagerDiv.style.width = parseInt((liWidth + liMargin * 2) * imageNumber) + 'px';
 }
 window.onload = init;
-
+/*
+foo.onclike = function(){
+	var a="foo";
+	return onClickNext(a);
+}
+*/

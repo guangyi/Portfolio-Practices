@@ -1,22 +1,22 @@
 var ul;
 var liItems; 
-var liNumber;
-var sliderWidth = 0;
-var left = 0;
-var id;
 var imageWidth;
+var imageNumber;
+var sliderWidth = 0;
 var currentImage = 0;
 function init(){	
 	ul = document.getElementById('image_slider');
 	liItems = ul.children;
-	liNumber = liItems.length;
-	for (i = 0; i < liNumber; i++){
+	imageNumber = liItems.length;
+
+	for (i = 0; i < imageNumber; i++){
 		// nodeType == 1 means the node is an element.
 		// in this way it's a cross-browser way.
 		//if (liItems[i].nodeType == 1){
 			//clietWidth and width???
 			// childNodes and children??
-			imageWidth = liItems[i].childNodes[0].clientWidth;
+			
+			imageWidth = liItems[i].childNodes[0].offsetWidth;
 			sliderWidth += imageWidth;
 	}	
 	ul.style.width = parseInt(sliderWidth) + 'px';
@@ -38,12 +38,12 @@ function slider(ul){
 			callback:function(){
 				currentImage++;
 				// if it doesn't slied to the last image, keep sliding
-				if(currentImage < liNumber-1){
+				if(currentImage < imageNumber-1){
 					slider(ul);
 				}
 				// if current image it's the last one, it slides back to the first one
 				else{
-					var leftPosition = (liNumber - 1) * imageWidth;
+					var leftPosition = (imageNumber - 1) * imageWidth;
 					// after 2 seconds, call the goBack function to slide to the first image					
 					setTimeout(function(){goBack(leftPosition)},2000); 					
 					setTimeout(function(){slider(ul)}, 4000);
