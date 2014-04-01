@@ -1,0 +1,258 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass";
+@mixin border-radius-part($part, $radius){
+	//border-radius-mixin for part of the box
+	// it could be: bottom-left, top-right...
+	-webkit-border-#{$part}-radius:$radius;
+	   -moz-border-#{$part}-radius:$radius;
+	    -ms-border-#{$part}-radius:$radius;
+	     -o-border-#{$part}-radius:$radius;
+	        border-#{$part}-radius:$radius;
+}
+@mixin animation($animaetionName){
+	-webkit-animation: #{$animaetionName};
+		 -o-animation: #{$animaetionName};
+	   -moz-animation: #{$animaetionName};
+	   		animation: #{$animaetionName};
+}
+
+@mixin keyframes($animaetionName){
+	@-webkit-keyframes $animaetionName{
+		@content;
+	}
+	@-moz-keyframes $animaetionName{
+		@content;
+	}
+	@keyframes $animaetionName{
+		@content;
+	}
+}
+@include keyframes(pro_in_top){
+	0%   { @include transform(rotateX(0deg));}
+	40%  { opacity:1;}
+	100% { @include transform(rotateX(-90deg));
+		   opacity:0;}
+}
+@include keyframes(pro_in_bottom){
+	0%   { @include transform(rotateX(0deg));}
+	40%  { opacity:1;}
+	100% { @include transform(rotateX(90deg));
+		   opacity:0;}
+}
+// these tow are for description
+@include keyframes(rotate_in_bottom){
+	0%   { @include transform(rotateX(-90deg)); opacity:0;}
+	//25%   { @include transform(rotateX(-90deg)); }
+	100% { @include transform(rotateX(0deg));  opacity: 0.8;}
+}
+@include keyframes(rotate_in_top){
+	0%   { @include transform(rotateX(90deg)); opacity:0;}
+	100% { @include transform(rotateX(0deg));  opacity: 0.8;}
+}
+// animation for mouse leave --projects page
+@include keyframes(rotate_out_bottom){
+	0%   { @include transform(rotateX(0deg));}
+	40%  { opacity:1;}
+	100% { @include transform(rotateX(-90deg)); 
+		   opacity:0;}
+}
+@include keyframes(rotate_out_top){
+		0%   { @include transform(rotateX(0deg));}
+	40%  { opacity:1;}
+	100% { @include transform(rotateX(90deg)); 
+		   opacity:0;}
+}
+@include keyframes(pro_out_top){
+	0%   { @include transform(rotateX(-90deg));}
+	100% { @include transform(rotateX(0deg)); }
+}
+@include keyframes(pro_out_bottom){
+	0%   { @include transform(rotateX(90deg));}
+	100% { @include transform(rotateX(0deg)); }
+}
+$bgColor:#A4DB00;
+$titleColor:#fff;
+$descriptionFontColor:#455c00;
+$descriptionBG:#fff;
+$BorderRadius:0.2em;
+$captionBG:#fff;
+$captionTag:#462304;
+$captionTitle:#462304;
+$buttonFontColor:#fff;
+$projectWidth:14vw;
+.projects{
+	float:left;
+	position:relative;
+	min-width:160px;
+	max-width:228px;
+	width:$projectWidth;
+	margin:10% 0 2% 3%;
+	//if there are elements other than .projects, than the nth-child not working correctly.
+	&:nth-child(1){
+		margin-left:4%;
+	}
+	/*&:nth-child(2n){
+		margin-top:11%;
+	}
+	&:nth-child(3){
+		margin-top:4%;
+	}*/
+	.description{
+		// set the perspective on the parent element
+		// so its child element can have different perspective on 3d transform animation!
+		box-shadow: 1px #f2f2f2;
+		position:relative;
+		width:$projectWidth;
+		height:$projectWidth;
+		max-width:235px;
+		max-height:235px;
+		min-width:160px;
+		min-height:160px;
+		background-size: 100%;
+		@include perspective(600px);
+		@include border-radius-part(top-left, $BorderRadius);
+		@include border-radius-part(top-right, $BorderRadius);
+		@include box-sizing(border-box);
+		.proShelter{
+			// if use position relative, .proShelter will take place,
+			// so the description will be below the proShelter, not under it and covered by it.
+			position:absolute;
+			width:100%;
+			height:50%;
+			background-position: 5% 5%; // sequence: left top
+			z-index:1;
+			overflow: hidden;
+			& img{
+				//max/min-width to make the img zoom within the right container
+				max-width: 100%;
+				min-width: 100%;
+			}
+		}
+		.descrpt{
+			//If you are trying to hide absolute positioned elements 
+			//make sure the container of those absolute positioned elements 
+			//is relatively positioned.
+			// it also work the opposite way--container: absolute, child: relative
+			position:absolute;
+			overflow: hidden;
+			height:50%;
+			width:100%;
+			background:$descriptionBG;
+			color:$descriptionFontColor;
+			opacity: 0.9;
+			text-align: center;
+			& p{
+				margin-left:0.5em;
+				margin-right:0.5em;
+				margin-top:1em;
+				line-height:1.2em;
+				font-size: 1em;
+			}
+		}	
+		.top, .top img{
+			@include border-radius-part(top-left, $BorderRadius);
+			@include border-radius-part(top-right, $BorderRadius); 
+		}
+		.down{
+			top:50%;
+			@include border-radius-part(bottom-left, $BorderRadius);
+			@include border-radius-part(bottom-right, $BorderRadius); 
+			& img{
+				position:relative;
+				top:-100%;
+				@include border-radius-part(bottom-left, $BorderRadius);
+				@include border-radius-part(bottom-right, $BorderRadius); 
+			}
+			& p{
+				position:relative;
+				top:-100%;
+			}
+		}
+		.in_top, .in_right{
+			@include transform-origin(50%, 100%, 0 );
+			@include animation('pro_in_top 0.5s forwards');
+		}
+		
+		.in_bottom, .in_left{
+			@include transform-origin(50%, 0, 0 );
+			@include animation('pro_in_bottom 0.5s forwards');
+		}
+		.out_top, .out_right{
+			@include transform(rotateX(90deg));
+			@include transform-origin(50%, 100%, 0 );
+			@include animation('pro_out_top 0.5s 0.3s forwards');
+		}
+		.out_bottom, .out_left{
+			@include transform(rotateX(90deg));
+			@include transform-origin(50%,0, 0 );
+			@include animation('pro_out_bottom 0.5s 0.3s forwards');
+		}
+		.rotate_in_bottom, .rotate_in_left{
+			@include transform(rotateX(-90deg));
+			z-index: 1;
+			opacity: 0;
+			@include transform-origin(50%, 100%, 0 );
+			@include animation('rotate_in_bottom 0.5s 0.3s forwards');
+		}
+		.rotate_in_top, .rotate_in_right{
+			z-index: 1;
+			opacity: 0;
+			@include transform-origin(50%, 0, 0 );
+			@include transform(rotateX(90deg));
+			@include animation('rotate_in_top 0.5s 0.3s forwards');
+		}
+		.rotate_out_top, .rotate_out_right{
+			z-index: 1;
+			@include transform-origin(50%, 0, 0 );
+			@include animation('rotate_out_top 0.5s forwards');
+		}
+		.rotate_out_bottom, .rotate_out_left{
+			z-index: 1;
+			@include transform-origin(50%, 100%, 0 );
+			@include animation('rotate_out_bottom 0.5s  forwards');
+		}
+	}
+	.caption{
+		@include box-sizing(border-box);
+		@include border-radius-part(bottom-left, 0.3em);
+		@include border-radius-part(bottom-right, 0.3em);
+		padding:5% 2% 0 2%;
+		width:100%;
+		height:8vh;
+		min-width:160px;
+		max-width:235px;
+		min-height:45px;
+		max-height: 50px;
+		background:$captionBG;
+		text-align: center;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		&:before, &:after{
+			z-index: -1;
+			position: absolute;
+			content: "";
+			bottom: 15px;
+			left: 10px;
+			width: 50%;
+			top: 80%;
+			max-width:300px;
+			background: #777;
+			@include box-shadow(0 15px 10px #777);
+			@include transform(rotate(-5deg));
+		}
+		&:after{
+			@include transform(rotate(5deg));
+			right: 10px;
+			left: auto;
+		}
+		& p{
+			color:$captionTag;
+			font-size:0.75em;
+		}
+	}
+}

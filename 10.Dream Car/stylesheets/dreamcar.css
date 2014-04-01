@@ -1,0 +1,678 @@
+/* Welcome to Compass.
+* In this file you should write your main styles. (or centralize your imports)
+* Import this file using the following HTML or equivalent:
+* <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 8, ../sass/dreamcar.scss */
+.deco li:nth-child(1) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 12, ../sass/dreamcar.scss */
+body {
+  min-height: 400px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9ee0ff), color-stop(100%, #000000));
+  background-image: -webkit-linear-gradient(top, #9ee0ff, #000000);
+  background-image: -moz-linear-gradient(top, #9ee0ff, #000000);
+  background-image: -o-linear-gradient(top, #9ee0ff, #000000);
+  background-image: linear-gradient(top, #9ee0ff, #000000);
+}
+
+/* line 16, ../sass/dreamcar.scss */
+.container {
+  width: 100%;
+  height: 90%;
+  margin-top: 5%;
+}
+
+/* line 21, ../sass/dreamcar.scss */
+.front {
+  position: relative;
+  z-index: 2;
+  float: left;
+  padding-top: 30px;
+  padding-left: 20px;
+  margin-top: 200px;
+  margin-left: 100px;
+  width: 300px;
+  height: 110px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff0000), color-stop(60%, #9c1010), color-stop(100%, #7d0b0b));
+  background-image: -webkit-linear-gradient(#ff0000, #9c1010 60%, #7d0b0b);
+  background-image: -moz-linear-gradient(#ff0000, #9c1010 60%, #7d0b0b);
+  background-image: -o-linear-gradient(#ff0000, #9c1010 60%, #7d0b0b);
+  background-image: linear-gradient(#ff0000, #9c1010 60%, #7d0b0b);
+  border-top-left-radius: 70% 60%;
+  border-bottom-left-radius: 30% 20%;
+  border-top-right-radius: 0% 80%;
+  box-shadow: 1px 3px 14px 2px;
+}
+
+/* line 37, ../sass/dreamcar.scss */
+.front-deco {
+  position: relative;
+  left: 210px;
+  top: 10px;
+  width: 50px;
+  height: 20px;
+  border-radius: 10px 6px;
+  -webkit-transform: skewX(-45deg);
+  -moz-transform: skewX(-45deg);
+  -ms-transform: skewX(-45deg);
+  -o-transform: skewX(-45deg);
+  transform: skewX(-45deg);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ff0000), color-stop(20%, #000000), color-stop(40%, #ff0000), color-stop(60%, #000000), color-stop(80%, #ff0000), color-stop(100%, #000000));
+  background-image: -webkit-linear-gradient(left, #ff0000, #000000, #ff0000, #000000, #ff0000, #000000);
+  background-image: -moz-linear-gradient(left, #ff0000, #000000, #ff0000, #000000, #ff0000, #000000);
+  background-image: -o-linear-gradient(left, #ff0000, #000000, #ff0000, #000000, #ff0000, #000000);
+  background-image: linear-gradient(left, #ff0000, #000000, #ff0000, #000000, #ff0000, #000000);
+  border: 1px double black;
+}
+
+/* line 48, ../sass/dreamcar.scss */
+.light {
+  position: relative;
+  top: -15px;
+  left: -6px;
+  width: 0px;
+  height: 0px;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 12px solid #D5D9E8;
+  border-bottom: 0px;
+  -webkit-transform: rotate(-28deg);
+  -moz-transform: rotate(-28deg);
+  -ms-transform: rotate(-28deg);
+  -o-transform: rotate(-28deg);
+  transform: rotate(-28deg);
+}
+
+/* line 60, ../sass/dreamcar.scss */
+.middle {
+  float: left;
+  position: relative;
+  top: 193px;
+  left: -25px;
+}
+
+/* line 66, ../sass/dreamcar.scss */
+.door {
+  z-index: 3;
+  float: left;
+  position: relative;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff0000), color-stop(60%, #9c1010), color-stop(100%, #7d0b0b));
+  background-image: -webkit-linear-gradient(#ff0000, #9c1010 60%, #7d0b0b);
+  background-image: -moz-linear-gradient(#ff0000, #9c1010 60%, #7d0b0b);
+  background-image: -o-linear-gradient(#ff0000, #9c1010 60%, #7d0b0b);
+  background-image: linear-gradient(#ff0000, #9c1010 60%, #7d0b0b);
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top-left-radius: 30px 60%;
+  border-bottom-left-radius: 10px 50px;
+  border-top-right-radius: 25px 50%;
+  border-bottom-right-radius: 40% 40%;
+  width: 280px;
+  height: 140px;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+/* line 81, ../sass/dreamcar.scss */
+.base {
+  z-index: 2;
+  position: relative;
+  width: 315px;
+  height: 50px;
+  background: #7D0B0B;
+  top: 97px;
+  left: 23px;
+  -webkit-box-shadow: 3px 3px 14px 2px;
+  -moz-box-shadow: 3px 3px 14px 2px;
+  box-shadow: 3px 3px 14px 2px;
+}
+
+/* line 91, ../sass/dreamcar.scss */
+.arch {
+  position: relative;
+  top: -20px;
+  left: 26px;
+  width: 235px;
+  height: 2px;
+  background: transparent;
+  border-radius: 100%;
+  border-bottom: 8px solid white;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+/* line 104, ../sass/dreamcar.scss */
+.mirror {
+  position: relative;
+  top: -26px;
+  left: 40px;
+  width: 35px;
+  height: 12px;
+  background: black;
+  border-radius: 35% 0 0 35%;
+  -webkit-transform: rotate(-40deg);
+  -moz-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+  -o-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(40%, #ff0000), color-stop(100%, #000000));
+  background-image: -webkit-linear-gradient(#ff0000 40%, #000000);
+  background-image: -moz-linear-gradient(#ff0000 40%, #000000);
+  background-image: -o-linear-gradient(#ff0000 40%, #000000);
+  background-image: linear-gradient(#ff0000 40%, #000000);
+  -webkit-box-shadow: 1px 2px 10px black;
+  -moz-box-shadow: 1px 2px 10px black;
+  box-shadow: 1px 2px 10px black;
+}
+
+/* line 116, ../sass/dreamcar.scss */
+.mirror:before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 1px;
+  left: 25px;
+  height: 28px;
+  width: 40px;
+  background: black;
+  border-radius: 115% 95% 90% 115%;
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  transform: rotate(40deg);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(40%, #ff0000), color-stop(100%, #000000));
+  background-image: -webkit-linear-gradient(#ff0000 40%, #000000);
+  background-image: -moz-linear-gradient(#ff0000 40%, #000000);
+  background-image: -o-linear-gradient(#ff0000 40%, #000000);
+  background-image: linear-gradient(#ff0000 40%, #000000);
+}
+
+/* line 129, ../sass/dreamcar.scss */
+.handel {
+  display: block;
+  left: 220px;
+  top: 30px;
+  position: relative;
+  width: 30px;
+  height: 15px;
+  background: black;
+  border-top-left-radius: 80%;
+  border-bottom-left-radius: 80%;
+  border-top-right-radius: 30%;
+  border-color: white;
+}
+
+/* line 143, ../sass/dreamcar.scss */
+.handel:before {
+  content: "";
+  display: block;
+  position: relative;
+  left: 2px;
+  top: 2px;
+  width: 18px;
+  height: 10px;
+  background: #E90303;
+  border-radius: 80% 20% 20% 80%;
+}
+
+/* line 154, ../sass/dreamcar.scss */
+.handel:after {
+  content: "";
+  display: block;
+  position: relative;
+  background: white;
+  width: 5px;
+  height: 5px;
+  top: 10px;
+  left: 15px;
+  border-radius: 50%;
+}
+
+/* line 166, ../sass/dreamcar.scss */
+.front-window {
+  position: relative;
+  top: 152px;
+  left: 360px;
+}
+
+/* line 172, ../sass/dreamcar.scss */
+.window {
+  z-index: 0;
+  position: relative;
+  width: 172px;
+  height: 20px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #ffffff), color-stop(30%, #d5d9e8), color-stop(50%, #c3c6d4));
+  background-image: -webkit-linear-gradient(#ffffff 20%, #d5d9e8 30%, #c3c6d4 50%);
+  background-image: -moz-linear-gradient(#ffffff 20%, #d5d9e8 30%, #c3c6d4 50%);
+  background-image: -o-linear-gradient(#ffffff 20%, #d5d9e8 30%, #c3c6d4 50%);
+  background-image: linear-gradient(#ffffff 20%, #d5d9e8 30%, #c3c6d4 50%);
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  border: 1px solid grey;
+  border-radius: 50% / 45%;
+  border-left: none;
+  border-right: none;
+}
+
+/* line 184, ../sass/dreamcar.scss */
+.window-base {
+  top: 17px;
+  left: 16px;
+  position: relative;
+  z-index: 5;
+  width: 39px;
+  height: 10px;
+  /*transparent for plan B*/
+  background: rgba(255, 255, 255, 0);
+  border-radius: 55%;
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  transform: rotate(4deg);
+  border-bottom: 3px solid #9C1010;
+  -webkit-box-shadow: 0 3px 1px 1px #9c1010;
+  -moz-box-shadow: 0 3px 1px 1px #9c1010;
+  box-shadow: 0 3px 1px 1px #9c1010;
+}
+
+/* line 198, ../sass/dreamcar.scss */
+.window-steel {
+  z-index: 1;
+  left: 12px;
+  top: -26px;
+  position: relative;
+  height: 0px;
+  width: 160px;
+  border-bottom: 11px solid #E90303;
+  border-left: 1px solid transparent;
+  border-right: 2px solid transparent;
+  transform-origin: 50% 50%;
+  -webkit-transform: rotate(147deg);
+  -moz-transform: rotate(147deg);
+  -ms-transform: rotate(147deg);
+  -o-transform: rotate(147deg);
+  transform: rotate(147deg);
+  box-shadow: 0 -3px 10px 1px;
+  border-radius: 10% 10%;
+}
+
+/* line 214, ../sass/dreamcar.scss */
+.back {
+  position: relative;
+  float: left;
+  top: 140px;
+  left: -65px;
+}
+
+/* line 220, ../sass/dreamcar.scss */
+.wheel-right {
+  top: 42px;
+  left: -5px;
+}
+
+/* line 224, ../sass/dreamcar.scss */
+.arch-shape {
+  position: relative;
+  z-index: 1;
+  width: 240px;
+  height: 155px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e90303), color-stop(42%, #9c1010), color-stop(100%, #7d0b0b));
+  background-image: -webkit-linear-gradient(#e90303, #9c1010 42%, #7d0b0b);
+  background-image: -moz-linear-gradient(#e90303, #9c1010 42%, #7d0b0b);
+  background-image: -o-linear-gradient(#e90303, #9c1010 42%, #7d0b0b);
+  background-image: linear-gradient(#e90303, #9c1010 42%, #7d0b0b);
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  border-radius: 50%/20%;
+  border-top: 2px solid white;
+}
+
+/* line 234, ../sass/dreamcar.scss */
+.arch-shape:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  bottom: 12%;
+  left: -7%;
+  right: -7%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d30707), color-stop(42%, #9c1010), color-stop(100%, #7d0b0b));
+  background-image: -webkit-linear-gradient(#d30707, #9c1010 42%, #7d0b0b);
+  background-image: -moz-linear-gradient(#d30707, #9c1010 42%, #7d0b0b);
+  background-image: -o-linear-gradient(#d30707, #9c1010 42%, #7d0b0b);
+  background-image: linear-gradient(#d30707, #9c1010 42%, #7d0b0b);
+  border-radius: 15% /50%;
+}
+
+/* line 245, ../sass/dreamcar.scss */
+.puzzle1 {
+  position: absolute;
+  width: 120px;
+  height: 30px;
+  background: -webkit-linear-gradient();
+  z-index: 0;
+  top: -6px;
+  left: -11%;
+  border-right: 2px solid black;
+  box-shadow: 0px -1px 5px 0px;
+  border-radius: 30% 0% 0% 0%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ed0202), color-stop(50%, #d30707));
+  background-image: -webkit-linear-gradient(#ed0202, #d30707 50%);
+  background-image: -moz-linear-gradient(#ed0202, #d30707 50%);
+  background-image: -o-linear-gradient(#ed0202, #d30707 50%);
+  background-image: linear-gradient(#ed0202, #d30707 50%);
+  -webkit-transform: skewX(60deg) skewY(-8deg);
+  -moz-transform: skewX(60deg) skewY(-8deg);
+  -ms-transform: skewX(60deg) skewY(-8deg);
+  -o-transform: skewX(60deg) skewY(-8deg);
+  transform: skewX(60deg) skewY(-8deg);
+}
+
+/* line 259, ../sass/dreamcar.scss */
+.puzzle2 {
+  position: absolute;
+  width: 160px;
+  height: 60px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ed0202), color-stop(50%, #d30707));
+  background-image: -webkit-linear-gradient(#ed0202, #d30707 50%);
+  background-image: -moz-linear-gradient(#ed0202, #d30707 50%);
+  background-image: -o-linear-gradient(#ed0202, #d30707 50%);
+  background-image: linear-gradient(#ed0202, #d30707 50%);
+  -webkit-transform: skewX(15deg) skewY(8deg);
+  -moz-transform: skewX(15deg) skewY(8deg);
+  -ms-transform: skewX(15deg) skewY(8deg);
+  -o-transform: skewX(15deg) skewY(8deg);
+  transform: skewX(15deg) skewY(8deg);
+  left: 27%;
+  top: -3%;
+  z-index: -1;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 15px;
+  -webkit-box-shadow: 1px 0px 5px 0px;
+  -moz-box-shadow: 1px 0px 5px 0px;
+  box-shadow: 1px 0px 5px 0px;
+}
+
+/* line 272, ../sass/dreamcar.scss */
+.emission {
+  position: relative;
+  width: 75px;
+  height: 50px;
+  background: #7D0B0B;
+  z-index: 0;
+  top: -65px;
+  left: 195px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 2px;
+  -webkit-box-shadow: 0 3px 10px 2px black;
+  -moz-box-shadow: 0 3px 10px 2px black;
+  box-shadow: 0 3px 10px 2px black;
+  -webkit-transform: skewX(-13deg) skewY(-8deg);
+  -moz-transform: skewX(-13deg) skewY(-8deg);
+  -ms-transform: skewX(-13deg) skewY(-8deg);
+  -o-transform: skewX(-13deg) skewY(-8deg);
+  transform: skewX(-13deg) skewY(-8deg);
+}
+
+/* line 285, ../sass/dreamcar.scss */
+.tube, .tube:before {
+  height: 20px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(5%, #bcbcbc), color-stop(50%, #ffffff), color-stop(90%, #000000));
+  background-image: -webkit-linear-gradient(#bcbcbc 5%, #ffffff 50%, #000000 90%);
+  background-image: -moz-linear-gradient(#bcbcbc 5%, #ffffff 50%, #000000 90%);
+  background-image: -o-linear-gradient(#bcbcbc 5%, #ffffff 50%, #000000 90%);
+  background-image: linear-gradient(#bcbcbc 5%, #ffffff 50%, #000000 90%);
+  position: relative;
+  top: 3px;
+  border-top-left-radius: 80%;
+  border-left: 4px solid black;
+}
+
+/* line 294, ../sass/dreamcar.scss */
+.tube {
+  -webkit-transform: skewX(5deg) skewY(8deg);
+  -moz-transform: skewX(5deg) skewY(8deg);
+  -ms-transform: skewX(5deg) skewY(8deg);
+  -o-transform: skewX(5deg) skewY(8deg);
+  transform: skewX(5deg) skewY(8deg);
+  left: 55px;
+  width: 15px;
+}
+
+/* line 299, ../sass/dreamcar.scss */
+.tube:before {
+  content: "";
+  display: block;
+  top: 22px;
+  left: -12px;
+  width: 20px;
+}
+
+/* line 306, ../sass/dreamcar.scss */
+.black-rub {
+  float: left;
+  position: relative;
+  z-index: 99;
+  margin-left: 50px;
+  width: 150px;
+  height: 150px;
+  background: #2D2D2D;
+  -webkit-box-shadow: 0 0 13px 5px black;
+  -moz-box-shadow: 0 0 13px 5px black;
+  box-shadow: 0 0 13px 5px black;
+  border-radius: 50%;
+}
+
+/* line 317, ../sass/dreamcar.scss */
+.steel {
+  float: left;
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  left: 15px;
+  top: 15px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #737375), color-stop(25%, #cccccc), color-stop(40%, #ffffff));
+  background-image: -webkit-linear-gradient(#737375, #cccccc 25%, #ffffff 40%);
+  background-image: -moz-linear-gradient(#737375, #cccccc 25%, #ffffff 40%);
+  background-image: -o-linear-gradient(#737375, #cccccc 25%, #ffffff 40%);
+  background-image: linear-gradient(#737375, #cccccc 25%, #ffffff 40%);
+}
+
+/* line 328, ../sass/dreamcar.scss */
+.deco li {
+  position: relative;
+  list-style: none;
+  width: 1px;
+  height: 1px;
+  border-left: 37px solid transparent;
+  border-right: 37px solid transparent;
+  border-bottom: 40px solid #414141;
+  border-radius: 50%;
+}
+
+/* line 338, ../sass/dreamcar.scss */
+.deco li:before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 1px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 7px solid #808080;
+  position: relative;
+  z-index: 100;
+  left: -35px;
+  top: 23px;
+  -webkit-transform: rotate(35deg);
+  -moz-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+/* line 352, ../sass/dreamcar.scss */
+.deco li:after {
+  /*grey dots*/
+  content: "";
+  display: block;
+  z-index: 3;
+  width: 6px;
+  height: 6px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(50%, #414141));
+  background-image: -webkit-linear-gradient(#ffffff, #414141 50%);
+  background-image: -moz-linear-gradient(#ffffff, #414141 50%);
+  background-image: -o-linear-gradient(#ffffff, #414141 50%);
+  background-image: linear-gradient(#ffffff, #414141 50%);
+  -webkit-box-shadow: 0 0 1px 1px grey;
+  -moz-box-shadow: 0 0 1px 1px grey;
+  box-shadow: 0 0 1px 1px grey;
+  border-radius: 50%;
+  position: relative;
+  top: -16px;
+  left: -3px;
+}
+
+/* line 366, ../sass/dreamcar.scss */
+.deco li:nth-child(1) {
+  top: 91px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+/* line 371, ../sass/dreamcar.scss */
+.deco li:nth-child(2) {
+  top: 25px;
+  left: 2%;
+  -webkit-transform: rotate(71deg);
+  -moz-transform: rotate(71deg);
+  -ms-transform: rotate(71deg);
+  -o-transform: rotate(71deg);
+  transform: rotate(71deg);
+}
+
+/* line 376, ../sass/dreamcar.scss */
+.deco li:nth-child(3) {
+  top: -56px;
+  left: 10.5%;
+  -webkit-transform: rotate(144deg);
+  -moz-transform: rotate(144deg);
+  -ms-transform: rotate(144deg);
+  -o-transform: rotate(144deg);
+  transform: rotate(144deg);
+}
+
+/* line 381, ../sass/dreamcar.scss */
+.deco li:nth-child(4) {
+  top: -98px;
+  left: 38%;
+  -webkit-transform: rotate(-145deg);
+  -moz-transform: rotate(-145deg);
+  -ms-transform: rotate(-145deg);
+  -o-transform: rotate(-145deg);
+  transform: rotate(-145deg);
+}
+
+/* line 386, ../sass/dreamcar.scss */
+.deco li:nth-child(5) {
+  top: -99px;
+  left: 48%;
+  -webkit-transform: rotate(-73deg);
+  -moz-transform: rotate(-73deg);
+  -ms-transform: rotate(-73deg);
+  -o-transform: rotate(-73deg);
+  transform: rotate(-73deg);
+}
+
+/* line 391, ../sass/dreamcar.scss */
+.deco-dots li {
+  list-style: none;
+  width: 8px;
+  height: 8px;
+  background: grey;
+  border-radius: 50%;
+}

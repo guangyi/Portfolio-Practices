@@ -1,0 +1,70 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass";
+$inputLable:#78A632;
+$formTitle:#558c00;
+$cloudMinWidth:80px;
+$cloudMaxWidth:200px;
+$cloudMinHeight:22px;
+$cloudMaxHeight:80px;
+$cloudWidth:13.5vw;
+.container{
+	background:#9ee0ff;
+	height:600px;
+  .clouds{
+		width:90vw;
+		min-height:100px;
+		margin-left:auto;
+		margin-right:auto;
+		overflow:hidden;
+		height:0.08 * 90vw;
+		background:inherit;
+		position:relative;
+		padding-bottom:2%;
+		.cloud{
+		margin-left:5%;
+		position:relative;
+		top:60%;
+		width:$cloudWidth;
+		min-width: $cloudMinWidth;
+		max-width: $cloudMaxWidth;
+		max-height: $cloudMaxHeight;
+		min-height: $cloudMinHeight;
+		height:0.26 * $cloudWidth;
+		//@include border-radius(50%);
+		background:#fff;
+		@include box-shadow(0px 5px 25px 0px lightgray);
+		@include border-radius( 40px);// based on max-height
+		.cloudPart1, .cloudPart2{
+			@include border-radius(100%);
+			background:inherit;
+			position: absolute;
+		}
+		.cloudPart1{
+			left:13%;
+			width:0.35 * $cloudWidth;
+			height:0.35 * $cloudWidth;
+			bottom:0.11 * $cloudWidth;
+			min-width: $cloudMinWidth * 0.35;
+			max-width: $cloudMaxWidth * 0.35;
+			min-height: $cloudMinWidth * 0.35;
+			max-height: $cloudMaxWidth * 0.35;
+		}
+		.cloudPart2{
+		  // the Bigger part of cloud
+			width:0.5 * $cloudWidth;
+			height:0.5 * $cloudWidth;
+			left:37%;
+			bottom:0.01 * $cloudWidth;
+			min-width: $cloudMinWidth * 0.5;
+			max-width: $cloudMaxWidth * 0.5;
+			min-height: $cloudMinWidth * 0.5;
+			max-height: $cloudMaxWidth * 0.5;
+		}
+    }
+}
+}

@@ -1,0 +1,139 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 15, ../sass/cloud.scss */
+.container {
+  background: #9ee0ff;
+  height: 600px;
+}
+/* line 18, ../sass/cloud.scss */
+.container .clouds {
+  width: 90vw;
+  min-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  height: 7.2vw;
+  background: inherit;
+  position: relative;
+  padding-bottom: 2%;
+}
+/* line 28, ../sass/cloud.scss */
+.container .clouds .cloud {
+  margin-left: 5%;
+  position: relative;
+  top: 60%;
+  width: 13.5vw;
+  min-width: 80px;
+  max-width: 200px;
+  max-height: 80px;
+  min-height: 22px;
+  height: 3.51vw;
+  background: #fff;
+  -webkit-box-shadow: 0px 5px 25px 0px lightgrey;
+  -moz-box-shadow: 0px 5px 25px 0px lightgrey;
+  box-shadow: 0px 5px 25px 0px lightgrey;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  border-radius: 40px;
+}
+/* line 42, ../sass/cloud.scss */
+.container .clouds .cloud .cloudPart1, .container .clouds .cloud .cloudPart2 {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  background: inherit;
+  position: absolute;
+}
+/* line 47, ../sass/cloud.scss */
+.container .clouds .cloud .cloudPart1 {
+  left: 13%;
+  width: 4.725vw;
+  height: 4.725vw;
+  bottom: 1.485vw;
+  min-width: 28px;
+  max-width: 70px;
+  min-height: 28px;
+  max-height: 70px;
+}
+/* line 57, ../sass/cloud.scss */
+.container .clouds .cloud .cloudPart2 {
+  width: 6.75vw;
+  height: 6.75vw;
+  left: 37%;
+  bottom: 0.135vw;
+  min-width: 40px;
+  max-width: 100px;
+  min-height: 40px;
+  max-height: 100px;
+}

@@ -1,0 +1,397 @@
+/* Welcome to Compass.
+* In this file you should write your main styles. (or centralize your imports)
+* Import this file using the following HTML or equivalent:
+* <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass";
+%center{
+	margin-left:auto;
+	margin-right:auto;
+}
+body{
+  min-height:400px;
+  @include background-image(linear-gradient(top, #9ee0ff, #000));
+  }
+ .container{
+  width:100%;
+  height:90%;
+  margin-top:5%;
+}
+.front{
+	position:relative;
+	z-index:2;
+	float:left;
+	padding-top:30px;
+	padding-left:20px;
+	margin-top:200px;
+	margin-left:100px;
+	width:300px;
+	height:110px;
+	@include background-image(linear-gradient(#ff0000,#9C1010 60%,#7D0B0B));
+	border-top-left-radius: 70% 60%;
+	border-bottom-left-radius:30% 20%;
+	border-top-right-radius:0% 80%;
+	box-shadow:1px 3px 14px 2px;
+}
+.front-deco{
+	position:relative;
+	left:210px;
+	top:10px;
+	width:50px;
+	height:20px;
+	border-radius:10px 6px;
+	@include transform(skewX(-45deg));
+	@include background-image(linear-gradient(left, red,black,red,black,red,black));  
+	border:1px double black;
+}
+.light{
+	position:relative;
+	top:-15px;
+  left:-6px;
+	width:0px;
+	height:0px; 
+	border-left:30px solid transparent;
+  border-right:30px solid transparent;
+  border-top:12px solid #D5D9E8;
+  border-bottom:0px;
+	@include transform(rotate(-28deg));
+}
+.middle{
+	float:left;
+	position:relative;
+	top:193px;
+	left:-25px;
+}
+.door{
+	z-index:3;
+	float:left;  
+	position:relative;
+	@include background-image(linear-gradient(#ff0000,#9C1010 60%,#7D0B0B));
+	border-left:2px solid black;
+	border-right:2px solid black;
+	border-top-left-radius:30px 60%;
+	border-bottom-left-radius:10px 50px;
+	border-top-right-radius:25px 50%;
+	border-bottom-right-radius:40% 40%;
+	width:280px;
+	height:140px;
+	@include transform(rotate(-3deg));
+}
+.base{
+	z-index:2;
+	position:relative;
+	width:315px;
+	height:50px;
+	background:#7D0B0B;
+	top:97px;
+	left:23px;
+	@include box-shadow(3px 3px 14px 2px); 
+}
+.arch{
+	position:relative;
+	top:-20px;
+	left:26px;
+	width:235px;
+	height:2px;
+	background:transparent;
+	border-radius:100%;
+	border-bottom:8px solid white;
+	border-left:none;
+	border-right:none;
+	border-top:none;
+}
+.mirror{
+	position:relative;
+	top:-26px;
+	left:40px;
+	width:35px;
+	height:12px;
+	background:black;
+	border-radius:35% 0 0 35%;
+	@include transform(rotate(-40deg));
+	@include background-image(linear-gradient(#ff0000 40%, black));
+	@include box-shadow(1px 2px 10px black);
+}
+.mirror:before{
+	content:"";
+	display:block;
+	position:relative;
+	top:1px;
+	left:25px;
+	height:28px;
+	width:40px;
+	background:black;
+	border-radius:115% 95% 90% 115%;
+	@include transform(rotate(40deg));
+	@include background-image(linear-gradient(#ff0000 40%, black));
+}
+.handel{
+	display:block;
+	left:220px;
+	top:30px;
+	position:relative;
+	width:30px;
+	height:15px;
+	background:black;
+	border-top-left-radius:80%;
+	border-bottom-left-radius:80%;
+	border-top-right-radius:30%;
+	border-color: white;
+}
+
+.handel:before{
+	content:"";
+	display:block;
+	position:relative;
+	left:2px;
+	top:2px;
+	width:18px;
+	height:10px;
+	background:#E90303;
+	border-radius:80% 20% 20% 80%
+}
+.handel:after{
+	content:"";
+	display:block;
+	position:relative;
+	background:white;
+	width:5px;
+	height:5px;
+	top:10px;
+	left:15px;
+	border-radius:50%;	
+}
+
+.front-window{
+	position:relative;
+	top:152px;
+	left:360px;
+}
+
+.window {
+	z-index:0; 
+	position:relative;
+	width:172px;
+	height:20px;
+	@include background-image(linear-gradient(white 20%,#D5D9E8 30%, #C3C6D4 50%));
+	@include transform(rotate(-30deg));
+	border: 1px solid grey;
+	border-radius:50% / 45%; 
+	border-left:none;
+	border-right:none;
+}
+.window-base {
+	top:17px;
+	left:16px;
+	position:relative;
+	z-index:5;
+	width:39px;
+	height:10px;
+	/*transparent for plan B*/
+	background:rgba(255,255,255,0);
+	border-radius:55%;
+	@include transform(rotate(4deg));
+	border-bottom:3px solid #9C1010;
+	@include box-shadow(0 3px 1px 1px #9C1010);
+}
+.window-steel{
+	z-index:1;
+	left:12px;
+	top:-26px;
+	position:relative;
+	height:0px;
+	width:160px;
+	border-bottom: 11px solid #E90303;
+	border-left: 1px solid transparent;
+	border-right: 2px solid transparent;
+	transform-origin:50% 50%;
+	@include transform(rotate(147deg));
+	box-shadow:0 -3px 10px 1px;
+	border-radius: 10% 10%; 
+}
+
+.back {
+	position:relative;
+	float:left;
+	top:140px;
+	left:-65px;
+}
+.wheel-right{
+	top:42px;
+	left:-5px;
+}
+.arch-shape{
+	position:relative;
+	z-index:1;
+	width:240px;
+	height:155px;
+	@include background-image(linear-gradient(#E90303,#9C1010 42%,#7D0B0B));
+	@include transform(rotate(-2deg));
+	border-radius:50%/20%;
+	border-top:2px solid white;
+}
+.arch-shape:before{
+	content:"";
+	display:block;
+	position:absolute;
+	top:10%;
+	bottom:12%;
+	left:-7%;
+	right:-7%;
+	@include background-image(linear-gradient(#D30707,#9C1010 42%,#7D0B0B));
+	border-radius:15% /50%;
+}
+.puzzle1{
+	position:absolute;
+	width:120px;
+	height:30px;
+	background:-webkit-linear-gradient();
+	z-index:0;
+	top:-6px;
+	left:-11%;
+	border-right:2px solid black;
+	box-shadow:0px -1px 5px 0px;
+	border-radius:30% 0% 0% 0%;
+	@include background-image(linear-gradient(#ED0202,#D30707 50%));
+	@include transform(skewX(60deg) skewY(-8deg));
+}
+.puzzle2{
+	position:absolute;
+	width:160px;
+	height:60px;
+	@include background-image(linear-gradient(#ED0202 ,#D30707 50%));
+	@include transform(skewX(15deg) skewY(8deg));
+	left:27%;
+	top:-3%;
+	z-index:-1;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:15px;
+	@include box-shadow(1px 0px 5px 0px);
+}
+.emission{
+	position:relative;
+	width:75px;
+	height:50px;
+	background:#7D0B0B;
+	z-index:0;
+	top:-65px;
+	left:195px;
+	border-bottom-right-radius:3px;
+	border-top-right-radius:2px;
+	@include box-shadow(0 3px 10px 2px black);
+	@include transform(skewX(-13deg) skewY(-8deg));
+}
+.tube, .tube:before{ 
+	height:20px;
+	@include background-image(linear-gradient(#bcbcbc 5%,#fff 50%, #000 90%));
+	position:relative;
+	top:3px;
+	border-top-left-radius:80%;
+	border-left:4px solid black;
+
+}
+.tube{
+	@include transform(skewX(5deg) skewY(8deg));
+	left:55px;
+	width:15px;
+}
+.tube:before{
+	content:"";
+	display:block;
+	top:22px;
+	left:-12px;
+	width:20px;
+}
+.black-rub{
+	float:left;
+	position:relative;
+	z-index:99;
+	margin-left:50px;
+	width:150px;
+	height:150px;
+	background: #2D2D2D;
+	@include box-shadow(0 0 13px 5px black);
+	border-radius: 50%;
+}
+.steel{
+	float:left;
+	width:120px;
+	height:120px;
+	background: white;
+	border-radius: 50%;
+	position: relative;
+	left:15px;
+	top:15px;
+	@include background-image(linear-gradient(#737375,#ccc 25% ,#fff 40%));
+}
+.deco li{
+	position:relative;  
+	list-style: none;
+	width:1px;
+	height:1px;
+	border-left: 37px solid transparent;
+	border-right: 37px solid transparent;
+	border-bottom: 40px solid #414141;
+	border-radius:50%;
+}
+.deco li:before{
+	content:"";
+	display:block;
+	width:1px;
+	height:1px;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	border-bottom: 7px solid #808080;
+	position:relative;
+	z-index:100;
+	left:-35px;
+	top:23px;
+	@include transform(rotate(35deg));
+}
+.deco li:after{
+	/*grey dots*/
+	content: "";
+	display:block;
+	z-index:3;
+	width:6px;
+	height: 6px;
+	@include background-image(linear-gradient(white,#414141 50%));
+	@include box-shadow( 0 0 1px 1px grey);
+	border-radius:50%;
+	position:relative;
+	top:-16px;
+	left:-3px;
+}
+.deco li:nth-child(1){
+	top: 91px;
+	@extend %center;
+	@include transform(rotate(0deg));
+}
+.deco li:nth-child(2){
+	top: 25px;
+	left:2%;
+	@include transform(rotate(71deg));
+}
+.deco li:nth-child(3){
+	top: -56px;
+	left:10.5%;
+	@include transform(rotate(144deg)); 
+}
+.deco li:nth-child(4){
+	top:-98px;
+	left:38%;
+	@include transform(rotate(-145deg));
+}
+.deco li:nth-child(5){
+	top: -99px;
+	left:48%;
+	@include transform(rotate(-73deg));
+}
+.deco-dots li{
+	list-style:none;
+	width:8px;
+	height: 8px;
+	background:grey;
+	border-radius:50%;
+}

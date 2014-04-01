@@ -1,0 +1,946 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@-webkit-keyframes pro_in_top {
+  /* line 36, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 37, ../sass/FlipEffect.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 38, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes pro_in_top {
+  /* line 36, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 37, ../sass/FlipEffect.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 38, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pro_in_top {
+  /* line 36, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 37, ../sass/FlipEffect.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 38, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pro_in_bottom {
+  /* line 42, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 43, ../sass/FlipEffect.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 44, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes pro_in_bottom {
+  /* line 42, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 43, ../sass/FlipEffect.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 44, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pro_in_bottom {
+  /* line 42, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 43, ../sass/FlipEffect.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 44, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotate_in_bottom {
+  /* line 49, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+
+  /* line 51, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 0.8;
+  }
+}
+
+@-moz-keyframes rotate_in_bottom {
+  /* line 49, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+
+  /* line 51, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes rotate_in_bottom {
+  /* line 49, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+
+  /* line 51, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 0.8;
+  }
+}
+
+@-webkit-keyframes rotate_in_top {
+  /* line 54, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+
+  /* line 55, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 0.8;
+  }
+}
+
+@-moz-keyframes rotate_in_top {
+  /* line 54, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+
+  /* line 55, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes rotate_in_top {
+  /* line 54, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+
+  /* line 55, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 0.8;
+  }
+}
+
+@-webkit-keyframes rotate_out_bottom {
+  /* line 59, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 60, ../sass/FlipEffect.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 61, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes rotate_out_bottom {
+  /* line 59, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 60, ../sass/FlipEffect.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 61, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotate_out_bottom {
+  /* line 59, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 60, ../sass/FlipEffect.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 61, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotate_out_top {
+  /* line 65, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 66, ../sass/FlipEffect.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 67, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes rotate_out_top {
+  /* line 65, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 66, ../sass/FlipEffect.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 67, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotate_out_top {
+  /* line 65, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+
+  /* line 66, ../sass/FlipEffect.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 67, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pro_out_top {
+  /* line 71, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+
+  /* line 72, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@-moz-keyframes pro_out_top {
+  /* line 71, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+
+  /* line 72, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes pro_out_top {
+  /* line 71, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+
+  /* line 72, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@-webkit-keyframes pro_out_bottom {
+  /* line 75, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+
+  /* line 76, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@-moz-keyframes pro_out_bottom {
+  /* line 75, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+
+  /* line 76, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes pro_out_bottom {
+  /* line 75, ../sass/FlipEffect.scss */
+  0% {
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+
+  /* line 76, ../sass/FlipEffect.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+
+/* line 88, ../sass/FlipEffect.scss */
+.projects {
+  float: left;
+  position: relative;
+  min-width: 160px;
+  max-width: 228px;
+  width: 14vw;
+  margin: 10% 0 2% 3%;
+  /*&:nth-child(2n){
+  	margin-top:11%;
+  }
+  &:nth-child(3){
+  	margin-top:4%;
+  }*/
+}
+/* line 96, ../sass/FlipEffect.scss */
+.projects:nth-child(1) {
+  margin-left: 4%;
+}
+/* line 105, ../sass/FlipEffect.scss */
+.projects .description {
+  box-shadow: 1px #f2f2f2;
+  position: relative;
+  width: 14vw;
+  height: 14vw;
+  max-width: 235px;
+  max-height: 235px;
+  min-width: 160px;
+  min-height: 160px;
+  background-size: 100%;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  -ms-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px;
+  -webkit-border-top-left-radius: 0.2em;
+  -moz-border-top-left-radius: 0.2em;
+  -ms-border-top-left-radius: 0.2em;
+  -o-border-top-left-radius: 0.2em;
+  border-top-left-radius: 0.2em;
+  -webkit-border-top-right-radius: 0.2em;
+  -moz-border-top-right-radius: 0.2em;
+  -ms-border-top-right-radius: 0.2em;
+  -o-border-top-right-radius: 0.2em;
+  border-top-right-radius: 0.2em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 121, ../sass/FlipEffect.scss */
+.projects .description .proShelter {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-position: 5% 5%;
+  z-index: 1;
+  overflow: hidden;
+}
+/* line 130, ../sass/FlipEffect.scss */
+.projects .description .proShelter img {
+  max-width: 100%;
+  min-width: 100%;
+}
+/* line 136, ../sass/FlipEffect.scss */
+.projects .description .descrpt {
+  position: absolute;
+  overflow: hidden;
+  height: 50%;
+  width: 100%;
+  background: white;
+  color: #455c00;
+  opacity: 0.9;
+  text-align: center;
+}
+/* line 149, ../sass/FlipEffect.scss */
+.projects .description .descrpt p {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 1em;
+  line-height: 1.2em;
+  font-size: 1em;
+}
+/* line 157, ../sass/FlipEffect.scss */
+.projects .description .top, .projects .description .top img {
+  -webkit-border-top-left-radius: 0.2em;
+  -moz-border-top-left-radius: 0.2em;
+  -ms-border-top-left-radius: 0.2em;
+  -o-border-top-left-radius: 0.2em;
+  border-top-left-radius: 0.2em;
+  -webkit-border-top-right-radius: 0.2em;
+  -moz-border-top-right-radius: 0.2em;
+  -ms-border-top-right-radius: 0.2em;
+  -o-border-top-right-radius: 0.2em;
+  border-top-right-radius: 0.2em;
+}
+/* line 161, ../sass/FlipEffect.scss */
+.projects .description .down {
+  top: 50%;
+  -webkit-border-bottom-left-radius: 0.2em;
+  -moz-border-bottom-left-radius: 0.2em;
+  -ms-border-bottom-left-radius: 0.2em;
+  -o-border-bottom-left-radius: 0.2em;
+  border-bottom-left-radius: 0.2em;
+  -webkit-border-bottom-right-radius: 0.2em;
+  -moz-border-bottom-right-radius: 0.2em;
+  -ms-border-bottom-right-radius: 0.2em;
+  -o-border-bottom-right-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+}
+/* line 165, ../sass/FlipEffect.scss */
+.projects .description .down img {
+  position: relative;
+  top: -100%;
+  -webkit-border-bottom-left-radius: 0.2em;
+  -moz-border-bottom-left-radius: 0.2em;
+  -ms-border-bottom-left-radius: 0.2em;
+  -o-border-bottom-left-radius: 0.2em;
+  border-bottom-left-radius: 0.2em;
+  -webkit-border-bottom-right-radius: 0.2em;
+  -moz-border-bottom-right-radius: 0.2em;
+  -ms-border-bottom-right-radius: 0.2em;
+  -o-border-bottom-right-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+}
+/* line 171, ../sass/FlipEffect.scss */
+.projects .description .down p {
+  position: relative;
+  top: -100%;
+}
+/* line 176, ../sass/FlipEffect.scss */
+.projects .description .in_top, .projects .description .in_right {
+  -webkit-transform-origin: 50% 100% 0;
+  -moz-transform-origin: 50% 100% 0;
+  -ms-transform-origin: 50% 100% 0;
+  -o-transform-origin: 50% 100% 0;
+  transform-origin: 50% 100% 0;
+  -webkit-animation: pro_in_top 0.5s forwards;
+  -o-animation: pro_in_top 0.5s forwards;
+  -moz-animation: pro_in_top 0.5s forwards;
+  animation: pro_in_top 0.5s forwards;
+}
+/* line 181, ../sass/FlipEffect.scss */
+.projects .description .in_bottom, .projects .description .in_left {
+  -webkit-transform-origin: 50% 0 0;
+  -moz-transform-origin: 50% 0 0;
+  -ms-transform-origin: 50% 0 0;
+  -o-transform-origin: 50% 0 0;
+  transform-origin: 50% 0 0;
+  -webkit-animation: pro_in_bottom 0.5s forwards;
+  -o-animation: pro_in_bottom 0.5s forwards;
+  -moz-animation: pro_in_bottom 0.5s forwards;
+  animation: pro_in_bottom 0.5s forwards;
+}
+/* line 185, ../sass/FlipEffect.scss */
+.projects .description .out_top, .projects .description .out_right {
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 100% 0;
+  -moz-transform-origin: 50% 100% 0;
+  -ms-transform-origin: 50% 100% 0;
+  -o-transform-origin: 50% 100% 0;
+  transform-origin: 50% 100% 0;
+  -webkit-animation: pro_out_top 0.5s 0.3s forwards;
+  -o-animation: pro_out_top 0.5s 0.3s forwards;
+  -moz-animation: pro_out_top 0.5s 0.3s forwards;
+  animation: pro_out_top 0.5s 0.3s forwards;
+}
+/* line 190, ../sass/FlipEffect.scss */
+.projects .description .out_bottom, .projects .description .out_left {
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 0 0;
+  -moz-transform-origin: 50% 0 0;
+  -ms-transform-origin: 50% 0 0;
+  -o-transform-origin: 50% 0 0;
+  transform-origin: 50% 0 0;
+  -webkit-animation: pro_out_bottom 0.5s 0.3s forwards;
+  -o-animation: pro_out_bottom 0.5s 0.3s forwards;
+  -moz-animation: pro_out_bottom 0.5s 0.3s forwards;
+  animation: pro_out_bottom 0.5s 0.3s forwards;
+}
+/* line 195, ../sass/FlipEffect.scss */
+.projects .description .rotate_in_bottom, .projects .description .rotate_in_left {
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  -ms-transform: rotateX(-90deg);
+  -o-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  z-index: 1;
+  opacity: 0;
+  -webkit-transform-origin: 50% 100% 0;
+  -moz-transform-origin: 50% 100% 0;
+  -ms-transform-origin: 50% 100% 0;
+  -o-transform-origin: 50% 100% 0;
+  transform-origin: 50% 100% 0;
+  -webkit-animation: rotate_in_bottom 0.5s 0.3s forwards;
+  -o-animation: rotate_in_bottom 0.5s 0.3s forwards;
+  -moz-animation: rotate_in_bottom 0.5s 0.3s forwards;
+  animation: rotate_in_bottom 0.5s 0.3s forwards;
+}
+/* line 202, ../sass/FlipEffect.scss */
+.projects .description .rotate_in_top, .projects .description .rotate_in_right {
+  z-index: 1;
+  opacity: 0;
+  -webkit-transform-origin: 50% 0 0;
+  -moz-transform-origin: 50% 0 0;
+  -ms-transform-origin: 50% 0 0;
+  -o-transform-origin: 50% 0 0;
+  transform-origin: 50% 0 0;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-animation: rotate_in_top 0.5s 0.3s forwards;
+  -o-animation: rotate_in_top 0.5s 0.3s forwards;
+  -moz-animation: rotate_in_top 0.5s 0.3s forwards;
+  animation: rotate_in_top 0.5s 0.3s forwards;
+}
+/* line 209, ../sass/FlipEffect.scss */
+.projects .description .rotate_out_top, .projects .description .rotate_out_right {
+  z-index: 1;
+  -webkit-transform-origin: 50% 0 0;
+  -moz-transform-origin: 50% 0 0;
+  -ms-transform-origin: 50% 0 0;
+  -o-transform-origin: 50% 0 0;
+  transform-origin: 50% 0 0;
+  -webkit-animation: rotate_out_top 0.5s forwards;
+  -o-animation: rotate_out_top 0.5s forwards;
+  -moz-animation: rotate_out_top 0.5s forwards;
+  animation: rotate_out_top 0.5s forwards;
+}
+/* line 214, ../sass/FlipEffect.scss */
+.projects .description .rotate_out_bottom, .projects .description .rotate_out_left {
+  z-index: 1;
+  -webkit-transform-origin: 50% 100% 0;
+  -moz-transform-origin: 50% 100% 0;
+  -ms-transform-origin: 50% 100% 0;
+  -o-transform-origin: 50% 100% 0;
+  transform-origin: 50% 100% 0;
+  -webkit-animation: rotate_out_bottom 0.5s  forwards;
+  -o-animation: rotate_out_bottom 0.5s  forwards;
+  -moz-animation: rotate_out_bottom 0.5s  forwards;
+  animation: rotate_out_bottom 0.5s  forwards;
+}
+/* line 220, ../sass/FlipEffect.scss */
+.projects .caption {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-bottom-left-radius: 0.3em;
+  -moz-border-bottom-left-radius: 0.3em;
+  -ms-border-bottom-left-radius: 0.3em;
+  -o-border-bottom-left-radius: 0.3em;
+  border-bottom-left-radius: 0.3em;
+  -webkit-border-bottom-right-radius: 0.3em;
+  -moz-border-bottom-right-radius: 0.3em;
+  -ms-border-bottom-right-radius: 0.3em;
+  -o-border-bottom-right-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+  padding: 5% 2% 0 2%;
+  width: 100%;
+  height: 8vh;
+  min-width: 160px;
+  max-width: 235px;
+  min-height: 45px;
+  max-height: 50px;
+  background: white;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 235, ../sass/FlipEffect.scss */
+.projects .caption:before, .projects .caption:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777777;
+  -moz-box-shadow: 0 15px 10px #777777;
+  box-shadow: 0 15px 10px #777777;
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+/* line 248, ../sass/FlipEffect.scss */
+.projects .caption:after {
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  transform: rotate(5deg);
+  right: 10px;
+  left: auto;
+}
+/* line 253, ../sass/FlipEffect.scss */
+.projects .caption p {
+  color: #462304;
+  font-size: 0.75em;
+}

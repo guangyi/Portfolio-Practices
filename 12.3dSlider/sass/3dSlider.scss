@@ -1,0 +1,182 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass";
+$btnBlogShots:#f86c99;
+$btnBlogLink:#666;//#fcadc6;
+$slide1:#ffAAAA;
+$slide2:#FFC924;
+$slide3:#A4DB00;
+$slide4:#9ee0ff;
+$slide5:#774747;
+.contentWrap{
+		width:100%;
+		height:700px;
+		left:0;
+		position:relative;
+		overflow: hidden;
+		background:#ff7575;
+		.sliderWrapper{
+			@include perspective(800px);
+			@include box-sizing(border-box);
+			width:100%;
+			text-align: center;
+			padding-top:2em;
+			max-height:700px;
+			min-height:450px;
+		}
+	}
+	.slider{
+		overflow: hidden;
+		background:#ffbbbb;
+		width:70vw;
+		//height:75vh;
+		max-height: 500px;
+		min-height:400px;
+		height:100%;
+		//max-width: 1000px;
+		position:absolute;
+		@include box-shadow(0px 6px 3px #000);
+		@include border-radius(0.3em);
+		-webkit-box-reflect: below 0px -webkit-linear-gradient(top, transparent 60% , #fff);
+		& ul{
+			left:0;
+			position:relative;
+			height:100%;
+			display:table;
+			& li{
+				//#774747;
+				color:#fff;
+				width:60vw;
+				height:70vh;
+				min-height: 400px;
+				position:relative;
+				float:left;
+				overflow:hidden;
+				@include box-sizing(border-box);
+				img{
+					width:100%;
+					height:100%;
+				}
+				h1{
+					margin-top:12%;
+				}
+				h1, h2, h3,p{
+					line-height: 2em;
+					padding:0.5em 0.5em 0 1em;
+				}
+				& h3{
+					font-size:1.7em;
+				}
+				& h2{
+				 	text-align:left;
+				 	font-size:2em;
+				}
+				& p{
+					font-size:1em;
+				}
+			}
+		}
+		.btnCtrl{
+			background:transparent;
+			position:absolute;
+			top:50%;
+			height:2.7em;
+			width:2.7em;
+			overflow: hidden;
+			border:none;
+		}
+		#prev{
+				background:url('../images/gray_prev.png') no-repeat;
+				background-position:0 100%;
+				left:0;
+				&:hover{
+					background-position:0 0;
+				}
+		}
+		#next{
+			background:url('../images/gray_next.png') no-repeat;
+			right: 0;
+			background-position:0 100%;
+			&:hover{
+				background-position:0 0;
+			}
+		}
+	}
+	#sliderLeft{
+		$colorList: $slide4,$slide5, $slide1,$slide2, $slide3,  $slide4, $slide5;
+		@for $i from 1 through 6{
+			& ul li:nth-child(#{$i}){
+				background: nth($colorList, $i);
+			}
+		}
+		@include transform(translateX(-74%) rotateY(35deg) scale(0.9) translateY(0.5%));
+		//@include transform-origin(top right 0);
+		-webkit-transform-origin: top right;
+ 		-moz-transform-origin:top right;
+ 		-ms-transform-origin:top right;
+ 		-o-transform-origin:top right;
+  		transform-origin:top right;
+  		//opacity:0.7;
+	}
+	#sliderRight{
+		$colorList: $slide1,$slide2, $slide3, $slide4, $slide5, $slide1, $slide2;
+		@for $i from 1 through 6{
+			& ul li:nth-of-type(#{$i}){
+				background: nth($colorList, $i);
+			}
+		}
+		@include transform(translateX(116.2%) rotateY(-35deg) scale(0.9) translateY(0%));
+		//@include transform-origin(top left 0);
+		-webkit-transform-origin: top left;
+  		-moz-transform-origin: top left;
+  		-ms-transform-origin: top left;
+  		-o-transform-origin: top left;
+ 		transform-origin: top left;
+ 		//opacity:0.7;
+	}
+	#slicesWrapper{
+		$colorList:$slide5, $slide1,$slide2,$slide3,$slide4,$slide5, $slide1; 
+		@for $i from 1 through 6{
+			& ul {
+				& li:nth-child(#{$i}){
+					background: nth($colorList, $i);
+				}
+			}
+		}
+		-webkit-box-reflect: below 0px -webkit-linear-gradient(top, transparent 60% , #fff);
+		@include transform(scale(0.9) translateX(23.5%) translateY(-5.4%));
+		.slice{
+			position:relative;
+			background:#9ee0ff;
+			width:50%;
+			height:100%;
+			float:left;
+			overflow: hidden;
+			.dialogBox{
+				//border:2px solid #F16c97;
+				position:relative;
+				width:100%;
+				height:100%;
+				overflow:scroll;
+				background:#fff;
+				@include border-radius(0.3em);
+				@include box-sizing(border-box);
+				padding:5% 8% 5% 8%;
+				//opacity:0.7;
+				line-height:150%;
+			}
+		}
+	}
+	.blogLink{
+		position:absolute;
+		float:right;
+		width:12em;
+		color:#fff;
+		right:1em;
+		bottom:1em;
+		font-size: 0.8em;
+	}
